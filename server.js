@@ -37,6 +37,30 @@ app.get('/test',function(req,res){
 	})
 });
 
+app.get('/usage',function(req,res){
+	var date=req.query.date;
+	console.log(date);
+	var query='SELECT * FROM ward_usage NATURAL JOIN ward_info WHERE date="'+date+'"';
+	runQuery(query,function(data){
+		res.setHeader('Content-Type','application/json');
+		res.send(data);
+	},function(err){
+		console.error(err);
+	});
+})
+
+app.get('/deaths',function(req,res){
+	var date=req.query.date;
+	console.log(date);
+	var query='SELECT * FROM deaths WHERE date="'+date+'"';
+	runQuery('SELECT * FROM test',function(data){
+		res.setHeader('Content-Type','application/json');
+		res.send(data);
+	},function(err){
+		console.error(err);
+	});
+})
+
 
 //---------------------------------------------
 // PUT is per convention used to update/add a specific record (no auth required)
