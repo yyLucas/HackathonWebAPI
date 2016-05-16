@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.7.1",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mysql": "^2.9.0",
+	"xhr2":"*",
+	"cheerio":"*",
+	"express-jwt":"^3.0.0",
+	"jsonwebtoken":"^5.0.0",
+	"password-hash":"*",
+	"nodemailer":"*",
+	"cron":"*",
+	"json2csv":"*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
